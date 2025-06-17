@@ -1,0 +1,121 @@
+/* Container principal da página */
+.container {
+  height: 100vh; /* ocupa toda a altura da janela */
+  display: flex; /* usa flexbox para alinhar elementos internos */
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center; /* centraliza verticalmente */
+  flex-direction: column; /* organiza os filhos em coluna */
+  background-image: linear-gradient(
+    15deg,
+    #13547a 0%,
+    #80d0c7 100%
+  ); /* fundo em gradiente */
+}
+
+/* Título principal da página */
+.title {
+  font-size: 70px; /* tamanho grande do texto */
+  color: white; /* cor branca */
+  animation: flipTitle 0.8s; /* aplica a animação definida abaixo */
+}
+
+/* Animação para o título aparecer com efeito de giro vertical */
+@keyframes flipTitle {
+  from {
+    transform: rotateX(90deg); /* começa rotacionado */
+  }
+  to {
+    transform: rotateX(0deg); /* finaliza em posição normal */
+  }
+}
+
+/* Estilização do container do campo de input */
+.containerinput {
+  background-color: rgba(255, 255, 255, 0.2); /* fundo branco translúcido */
+  padding: 15px;
+  margin: 34px 0; /* espaçamento acima e abaixo */
+  display: flex; /* organiza input e botão em linha */
+  border-radius: 8px;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5); /* sombra para dar profundidade */
+}
+
+/* Estilo do campo de input */
+.containerinput input {
+  background-color: transparent; /* sem cor de fundo */
+  border: 0; /* sem borda */
+  font-size: 20px;
+  color: white;
+  outline: none; /* remove borda azul ao focar */
+  margin-right: 8px; /* espaço entre input e botão */
+}
+
+/* Botão de busca (ícone de lupa) */
+.buttonSearch {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* muda o cursor para “mão” */
+  transition: transform 0.5s; /* animação suave no hover */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.buttonSearch:hover {
+  transform: scale(1.2); /* aumenta o botão levemente */
+}
+
+/* Estilização do container principal de resposta ou dados */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 500px;
+  border-radius: 8px;
+}
+
+/* Título dentro da seção .main */
+.main h2 {
+  margin: 16px 0;
+  font-size: 39px;
+}
+
+/* Provavelmente você quis usar 'span', mas está escrito errado como 'spa' */
+.main spa {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+/* Estilos responsivos para diferentes larguras de tela */
+
+/* Até 713px: reduz tamanho do título e caixa principal */
+@media (max-width: 713px) {
+  .title {
+    font-size: 70px;
+  }
+
+  .main h2 {
+    font-size: 28px;
+  }
+
+  .main span {
+    width: 80%;
+    min-height: 250px;
+  }
+}
+
+/* Até 587px: reduz mais o título */
+@media (max-width: 587px) {
+  .title {
+    font-size: 55px;
+  }
+}
+
+/* Até 461px: reduz ainda mais o título */
+@media (max-width: 461px) {
+  .title {
+    font-size: 45px;
+  }
+}
