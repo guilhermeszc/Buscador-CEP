@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 // Importa o arquivo de estilos CSS externo
-import "./app.css";
+import "./App.css";
 
 // Importa o ícone de lupa da biblioteca react-icons
 import { FaSearch } from "react-icons/fa";
